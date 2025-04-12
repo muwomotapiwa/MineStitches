@@ -213,7 +213,7 @@ header {
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   grid-template-rows: repeat(2, auto); /* 2 rows */
   gap: 2rem;
   justify-content: center;
@@ -222,7 +222,7 @@ header {
 .flip-card {
   perspective: 1000px;
   width: 100%;
-  height: 450px;
+  height: 450px; /* Fixed height for desktop */
 }
 
 .flip-card-inner {
@@ -267,7 +267,7 @@ header {
 
 .flip-card img {
   width: 100%;
-  height: 400px; /* Adjust as needed */
+  height: 400px; /* Fixed height for desktop images */
   object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 15px;
@@ -280,4 +280,36 @@ header {
 
 .flip-card-back p {
   font-size: 0.9rem;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+  }
+
+  .flip-card {
+    height: 400px; /* Adjust height for tablets */
+  }
+
+  .flip-card img {
+    height: 300px; /* Adjust image height for tablets */
+  }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 480px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    grid-template-rows: auto; /* Auto rows */
+  }
+
+  .flip-card {
+    height: auto; /* Allow cards to adjust height based on content */
+  }
+
+  .flip-card img {
+    height: 250px; /* Adjust image height for mobile */
+  }
 }
