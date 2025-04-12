@@ -35,3 +35,36 @@ audioElement.addEventListener('ended', () => {
   playButton.textContent = '▶';
   isPlaying = false;
 });
+
+// Contact-js section
+// Select the form and input elements
+const consultationForm = document.getElementById('consultation-form');
+
+// Add event listener for form submission
+consultationForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
+
+  // Collect form data
+  const formData = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    dateTime: document.getElementById('date-time').value.trim(),
+    message: document.getElementById('message').value.trim(),
+  };
+
+  // Basic validation
+  if (!formData.name || !formData.email || !formData.phone || !formData.dateTime || !formData.message) {
+    alert('Please fill out all fields.');
+    return;
+  }
+
+  // Simulate form submission (e.g., sending data via an API)
+  console.log('Form Data Submitted:', formData);
+
+  // Display a success message
+  alert('Thank you! Your consultation request has been submitted.');
+
+  // Reset the form
+  consultationForm.reset();
+});
