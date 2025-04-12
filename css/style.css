@@ -158,3 +158,41 @@ header {
   height: 100vh;
   overflow: hidden;
 }
+
+.designer-gallery {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.designer-gallery h3 {
+  color: gold;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.designer-gallery p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 300px; /* Adjust as needed */
+  height: 380px; /* Adjust as needed */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
