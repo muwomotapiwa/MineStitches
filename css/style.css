@@ -467,3 +467,77 @@ header {
     display: flex;
   }
 }
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Centers the music player by default */
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #FF467E;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links li a:hover {
+  color: #FF467E;
+}
+
+/* Music Player */
+.music-player {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center; /* Center the music player content */
+}
+
+.music-player .track-title {
+  color: #FF467E;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+.music-player .play-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.music-player .play-button:hover {
+  color: #FF467E;
+}
+
+/* Hide Music Player on Mobile Devices */
+@media (max-width: 768px) {
+  .music-player {
+    display: none;
+  }
+}
