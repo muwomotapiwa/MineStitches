@@ -77,7 +77,8 @@ section {
   background-color: #111;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 15px rgba(155, 10, 146, 0.2);
+  margin-top: 55px;
 }
 .about-designer h2 {
   color: #FF467E;
@@ -325,4 +326,36 @@ header {
   .flip-card-back p {
     font-size: 0.8rem; /* Adjust font size for better readability on mobile */
   }
+}
+
+/* Call to Action Section */
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(140, 57, 140, 0.2);
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background: #FF467E;
+  color: black;
+  padding: 0.8rem 2rem;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
 }
