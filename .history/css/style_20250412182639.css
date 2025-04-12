@@ -270,8 +270,8 @@ header {
   height: 400px; /* Adjust as needed */
   object-fit: cover;
   margin-bottom: 1rem;
-  border-radius: 15px;
 }
+
 
 .flip-card-front p {
   font-size: 0.9rem;

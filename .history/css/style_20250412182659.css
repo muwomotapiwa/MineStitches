@@ -270,7 +270,7 @@ header {
   height: 400px; /* Adjust as needed */
   object-fit: cover;
   margin-bottom: 1rem;
-  border-radius: 15px;
+  border-radius: ;
 }
 
 .flip-card-front p {
