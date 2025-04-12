@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - MineStitches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact-style.css" />
+</head>
+<body>
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">MineStitches</a>
+    </div>
+
+    <!-- Music Player (Visible only on Desktop/Tablet) -->
+    <div class="music-player" id="musicPlayer">
+      <div class="track-title">🎵 Iconic Piano Pieces (by James Malikey)</div>
+      <button class="play-button" id="playButton">▶</button>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#products-gallery">Products & Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Contact Us Section -->
+	  <section class="contact-section">
+	  <video autoplay muted loop playsinline class="background-video">
+		<source src="assets/videos/MotionBlack.webm" type="video/webm">
+		Your browser does not support the video tag.
+	  </video>
+
+	  <div class="form-container">
+		<h2>Contact Us</h2>
+		<p style="color: #FF467E; font-family: 'Playfair Display', serif; text-align: center; margin-bottom: 2rem;">
+		  Book a consultation with us today to discuss your bespoke design needs.
+		</p>
+
+		<form id="consultation-form" class="contact-form">
+		  <div class="form-group">
+			<label for="name">Full Name</label>
+			<input type="text" id="name" name="name" placeholder="Your full name" required />
+		  </div>
+
+		  <div class="form-group">
+			<label for="email">Email Address</label>
+			<input type="email" id="email" name="email" placeholder="Your email address" required />
+		  </div>
+
+		  <div class="form-group">
+			<label for="phone">Phone Number</label>
+			<input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+		  </div>
+
+		  <div class="form-group">
+			<label for="date-time">Preferred Date/Time</label>
+			<input type="datetime-local" id="date-time" name="date-time" required />
+		  </div>
+
+		  <div class="form-group">
+			<label for="message">Message</label>
+			<textarea id="message" name="message" rows="4" placeholder="Tell us about your needs..." required></textarea>
+		  </div>
+
+		  <button type="submit" class="cta-btn">Book Consultation</button>
+		</form>
+	  </div>
+	</section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p>&copy; 2025 MineStitches. All Rights Reserved.</p>
+    <p class="credit">
+      Website By 
+      <a href="https://www.KypexTech.co.za" target="_blank" class="credit-link">KypexTech</a>
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
