@@ -31,7 +31,7 @@ header iframe {
 .hero-content h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  color: gold;
+  color: #FF467E;
   animation: fadeInDown 1s ease-out;
 }
 .hero-content p {
@@ -40,7 +40,7 @@ header iframe {
   animation: fadeInUp 1.5s ease-out;
 }
 .hero-content .cta-btn {
-  background: gold;
+  background: #FF467E;
   color: black;
   padding: 0.8rem 2rem;
   border: none;
@@ -53,7 +53,7 @@ header iframe {
 .hero-content .watch-btn {
   display: block;
   margin-top: 1rem;
-  color: gold;
+  color: #FF467E;
   text-decoration: underline;
 }
 @keyframes fadeInDown {
@@ -80,7 +80,7 @@ section {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 .about-designer h2 {
-  color: gold;
+  color: #FF467E;
   font-family: 'Playfair Display', serif;
   margin-bottom: 1rem;
 }
@@ -93,7 +93,7 @@ section {
 .timeline-card {
   min-width: 200px;
   background: #222;
-  border-left: 3px solid gold;
+  border-left: 3px solid #FF467E;
   padding: 1rem;
   border-radius: 5px;
 }
@@ -127,7 +127,7 @@ footer {
   font-size: 0.9rem;
 }
 .footer-links a {
-  color: gold;
+  color: #FF467E;
   margin: 0 1rem;
   text-decoration: none;
 }
@@ -135,7 +135,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: gold;
+  background: #FF467E;
   color: black;
   border: none;
   padding: 0.5rem 1rem;
@@ -165,7 +165,7 @@ header {
 }
 
 .designer-gallery h3 {
-  color: gold;
+  color: #FF467E;
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -206,7 +206,7 @@ header {
 
 .epic-statement {
   font-size: 1.5rem;
-  color: gold;
+  color: #FF467E;
   font-family: 'Playfair Display', serif;
   margin-bottom: 2rem;
 }
@@ -260,7 +260,7 @@ header {
 }
 
 .flip-card-back {
-  background-color: gold;
+  background-color: #FF467E;
   color: black;
   transform: rotateY(180deg);
 }
