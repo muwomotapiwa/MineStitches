@@ -517,7 +517,7 @@ header {
 }
 
 .music-player .track-title {
-  color: #FF467E;
+  color: white;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
 }
@@ -525,7 +525,7 @@ header {
 .music-player .play-button {
   background: transparent;
   border: none;
-  color: white;
+  color: #FF467E;
   font-size: 1.2rem;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
