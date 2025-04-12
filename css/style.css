@@ -303,13 +303,26 @@ header {
   .testimonial-grid {
     grid-template-columns: 1fr; /* Single column for mobile */
     grid-template-rows: auto; /* Auto rows */
+    gap: 1rem; /* Reduce gap for mobile */
   }
 
   .flip-card {
-    height: auto; /* Allow cards to adjust height based on content */
+    width: 100%; /* Ensure cards take full width */
+    max-width: 280px; /* Limit maximum width for larger mobile devices */
+    margin: 0 auto; /* Center the card horizontally */
+    height: 400px; /* Allow cards to adjust height based on content */
   }
 
   .flip-card img {
-    height: 250px; /* Adjust image height for mobile */
+    width: 100%; /* Ensure images take full width */
+    height: 350px; /* Fixed height for mobile images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    margin-bottom: 1rem;
+    border-radius: 15px;
+  }
+
+  .flip-card-front p,
+  .flip-card-back p {
+    font-size: 0.8rem; /* Adjust font size for better readability on mobile */
   }
 }
