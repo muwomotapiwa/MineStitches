@@ -76,7 +76,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Highlight on focus */
+  box-shadow: 0 0 5px rgba(203, 7, 148, 0.5); /* Highlight on focus */
 }
 
 /* Call-to-Action Button */
