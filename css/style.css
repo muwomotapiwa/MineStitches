@@ -157,6 +157,37 @@ footer {
   margin: 0 1rem;
   text-decoration: none;
 }
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Credit Section */
+.credit {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.credit-link {
+  color: red; /* Red text for the link */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.credit-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
 .scroll-top {
   position: fixed;
   bottom: 20px;
