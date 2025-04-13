@@ -572,3 +572,32 @@ header {
     display: none;
   }
 }
+
+/* About Us Audio Player */
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.audio-player .audio-title {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+.audio-player .play-audio-btn {
+  background: transparent;
+  border: none;
+  color: #FF467E;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+.audio-player .play-audio-btn:hover {
+  color: #FF467E;
+}
