@@ -7,8 +7,16 @@ document.querySelector('.scroll-top').addEventListener('click', () => {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
+// Add click event listener to toggle the hamburger menu
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
+});
+
+// Close the hamburger menu when a navigation link is clicked
+document.querySelectorAll('.nav-links li a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active'); // Remove the 'active' class
+  });
 });
 
 // Music Player Logic
