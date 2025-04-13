@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css" /> <!-- Shared styles -->
   <link rel="stylesheet" href="css/contact-style.css" /> <!-- Contact Us-specific styles -->
   <link rel="stylesheet" href="css/about-style.css" /> <!-- About Us-specific styles -->
+  <link rel="stylesheet" href="css/products-gallery-style.css">
 </head>
   <!-- Floating Navigation Bar -->
   <nav class="navbar">
@@ -25,8 +26,7 @@
     <ul class="nav-links">
       <li><a href="#" onclick="showSection('home')">Home</a></li>
       <li><a href="#" onclick="showSection('about-us')">About Us</a></li>
-      <!--<li><a href="#" onclick="showSection('products-gallery')">Products & Gallery</a></li>-->
-      <li><a href="products-gallery.html">Products & Gallery</a></li>
+      <li><a href="#" onclick="showSection('products-gallery')">Products & Gallery</a></li>      
       <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
     </ul>
     <div class="hamburger">
@@ -286,6 +286,492 @@
         </form>
       </div>
     </section>
+
+    <!--New Product Section Added Below-->
+
+        <!-- Add this section before your footer in index.html -->
+            <!-- Products & Gallery Section -->
+    <section id="products-gallery" class="page-section" style="display: none;">
+      <!-- Hero Section -->
+      <header class="hero-section">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="assets/videos/MotionBlack.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+          <h1>Explore Our Collections</h1>
+          <p>Discover the art of elegance through our curated designs for every occasion.</p>
+          <button class="cta-btn" onclick="showSection('contact')">Book a Consultation</button>
+        </div>
+      </header>
+
+      <!-- Category Navigation -->
+      <section class="category-navigation">
+        <div class="container">
+          <button class="category-btn active" data-section="modern-traditional">Modern Traditional</button>
+          <button class="category-btn" data-section="white-weddings">White Weddings</button>
+          <button class="category-btn" data-section="matrix-dance">Matrix Dance</button>
+          <button class="category-btn" data-section="events">Events</button>
+        </div>
+      </section>
+
+      <!-- Modern Traditional Section -->
+      <section id="modern-traditional" class="category-section">
+        <h2>Modern Traditional</h2>
+        <p>Blend tradition with modernity in these stunning designs.</p>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern1.jpeg" alt="Modern Traditional Design 1" class="gallery-image">
+            <p>Modern Traditional 1</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern2.jpeg" alt="Modern Traditional Design 2" class="gallery-image">
+            <p>Modern Traditional 2</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern3.jpeg" alt="Modern Traditional Design 3" class="gallery-image">
+            <p>Modern Traditional 3</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern4.jpeg" alt="Modern Traditional Design 4" class="gallery-image">
+            <p>Modern Traditional 4</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern5.jpeg" alt="Modern Traditional Design 5" class="gallery-image">
+            <p>Modern Traditional 5</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern6.jpeg" alt="Modern Traditional Design 6" class="gallery-image">
+            <p>Modern Traditional 6</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern7.jpeg" alt="Modern Traditional Design 7" class="gallery-image">
+            <p>Modern Traditional 7</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern8.jpeg" alt="Modern Traditional Design 8" class="gallery-image">
+            <p>Modern Traditional 8</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern9.jpeg" alt="Modern Traditional Design 9" class="gallery-image">
+            <p>Modern Traditional 9</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern10.jpeg" alt="Modern Traditional Design 10" class="gallery-image">
+            <p>Modern Traditional 10</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern11.jpeg" alt="Modern Traditional Design 11" class="gallery-image">
+            <p>Modern Traditional 11</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern12.jpeg" alt="Modern Traditional Design 12" class="gallery-image">
+            <p>Modern Traditional 12</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern13.jpeg" alt="Modern Traditional Design 13" class="gallery-image">
+            <p>Modern Traditional 13</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern14.jpeg" alt="Modern Traditional Design 14" class="gallery-image">
+            <p>Modern Traditional 14</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern15.jpeg" alt="Modern Traditional Design 15" class="gallery-image">
+            <p>Modern Traditional 15</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern16.jpeg" alt="Modern Traditional Design 16" class="gallery-image">
+            <p>Modern Traditional 16</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern17.jpeg" alt="Modern Traditional Design 17" class="gallery-image">
+            <p>Modern Traditional 17</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern18.jpeg" alt="Modern Traditional Design 18" class="gallery-image">
+            <p>Modern Traditional 18</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern19.jpeg" alt="Modern Traditional Design 19" class="gallery-image">
+            <p>Modern Traditional 19</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern20.jpeg" alt="Modern Traditional Design 20" class="gallery-image">
+            <p>Modern Traditional 20</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern21.jpeg" alt="Modern Traditional Design 21" class="gallery-image">
+            <p>Modern Traditional 21</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern22.jpeg" alt="Modern Traditional Design 22" class="gallery-image">
+            <p>Modern Traditional 22</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern23.jpeg" alt="Modern Traditional Design 23" class="gallery-image">
+            <p>Modern Traditional 23</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern24.jpeg" alt="Modern Traditional Design 24" class="gallery-image">
+            <p>Modern Traditional 24</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern25.jpeg" alt="Modern Traditional Design 25" class="gallery-image">
+            <p>Modern Traditional 25</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern26.jpeg" alt="Modern Traditional Design 26" class="gallery-image">
+            <p>Modern Traditional 26</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern27.jpeg" alt="Modern Traditional Design 27" class="gallery-image">
+            <p>Modern Traditional 27</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/traditional/modern28.jpeg" alt="Modern Traditional Design 28" class="gallery-image">
+            <p>Modern Traditional 28</p>
+          </div>
+        </div>
+        <button class="view-more-btn">View More</button>
+      </section>
+
+      <!-- White Weddings Section -->
+      <section id="white-weddings" class="category-section" style="display: none;">
+        <h2>White Weddings</h2>
+        <p>Elegant gowns and suits for your special day.</p>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding1.jpeg" alt="Wedding Dress 1" class="gallery-image">
+            <p>Wedding Dress 1</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding2.jpeg" alt="Wedding Dress 2" class="gallery-image">
+            <p>Wedding Dress 2</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding3.jpeg" alt="Wedding Dress 3" class="gallery-image">
+            <p>Wedding Dress 3</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding4.jpeg" alt="Wedding Dress 4" class="gallery-image">
+            <p>Wedding Dress 4</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding5.jpeg" alt="Wedding Dress 5" class="gallery-image">
+            <p>Wedding Dress 5</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding6.jpeg" alt="Wedding Dress 6" class="gallery-image">
+            <p>Wedding Dress 6</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding7.jpeg" alt="Wedding Dress 7" class="gallery-image">
+            <p>Wedding Dress 7</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding8.jpeg" alt="Wedding Dress 8" class="gallery-image">
+            <p>Wedding Dress 8</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding9.jpeg" alt="Wedding Dress 9" class="gallery-image">
+            <p>Wedding Dress 9</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding10.jpeg" alt="Wedding Dress 10" class="gallery-image">
+            <p>Wedding Dress 10</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding11.jpeg" alt="Wedding Dress 11" class="gallery-image">
+            <p>Wedding Dress 11</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding12.jpeg" alt="Wedding Dress 12" class="gallery-image">
+            <p>Wedding Dress 12</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding13.jpeg" alt="Wedding Dress 13" class="gallery-image">
+            <p>Wedding Dress 13</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding14.jpeg" alt="Wedding Dress 14" class="gallery-image">
+            <p>Wedding Dress 14</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/weddings/wedding15.jpeg" alt="Wedding Dress 15" class="gallery-image">
+            <p>Wedding Dress 15</p>
+          </div>
+        </div>
+        <button class="view-more-btn">View More</button>
+      </section>
+
+      <!-- Matrix Dance Section -->
+      <section id="matrix-dance" class="category-section" style="display: none;">
+        <h2>Matrix Dance</h2>
+        <p>Bold and vibrant designs for your matric dance.</p>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix1.jpeg" alt="Matrix Dance Gown 1" class="gallery-image">
+            <p>Matrix Dance 1</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix2.jpeg" alt="Matrix Dance Gown 2" class="gallery-image">
+            <p>Matrix Dance 2</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix3.jpeg" alt="Matrix Dance Gown 3" class="gallery-image">
+            <p>Matrix Dance 3</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix4.jpeg" alt="Matrix Dance Gown 4" class="gallery-image">
+            <p>Matrix Dance 4</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix5.jpeg" alt="Matrix Dance Gown 5" class="gallery-image">
+            <p>Matrix Dance 5</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix6.jpeg" alt="Matrix Dance Gown 6" class="gallery-image">
+            <p>Matrix Dance 6</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix7.jpeg" alt="Matrix Dance Gown 7" class="gallery-image">
+            <p>Matrix Dance 7</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix8.jpeg" alt="Matrix Dance Gown 8" class="gallery-image">
+            <p>Matrix Dance 8</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix9.jpeg" alt="Matrix Dance Gown 9" class="gallery-image">
+            <p>Matrix Dance 9</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix10.jpeg" alt="Matrix Dance Gown 10" class="gallery-image">
+            <p>Matrix Dance 10</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix11.jpeg" alt="Matrix Dance Gown 11" class="gallery-image">
+            <p>Matrix Dance 11</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix12.jpeg" alt="Matrix Dance Gown 12" class="gallery-image">
+            <p>Matrix Dance 12</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix13.jpeg" alt="Matrix Dance Gown 13" class="gallery-image">
+            <p>Matrix Dance 13</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix14.jpeg" alt="Matrix Dance Gown 14" class="gallery-image">
+            <p>Matrix Dance 14</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix15.jpeg" alt="Matrix Dance Gown 15" class="gallery-image">
+            <p>Matrix Dance 15</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix16.jpeg" alt="Matrix Dance Gown 16" class="gallery-image">
+            <p>Matrix Dance 16</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix17.jpeg" alt="Matrix Dance Gown 17" class="gallery-image">
+            <p>Matrix Dance 17</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix18.jpeg" alt="Matrix Dance Gown 18" class="gallery-image">
+            <p>Matrix Dance 18</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix19.jpeg" alt="Matrix Dance Gown 19" class="gallery-image">
+            <p>Matrix Dance 19</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix20.jpeg" alt="Matrix Dance Gown 20" class="gallery-image">
+            <p>Matrix Dance 20</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/matrix/matrix21.jpeg" alt="Matrix Dance Gown 21" class="gallery-image">
+            <p>Matrix Dance 21</p>
+          </div>
+        </div>
+        <button class="view-more-btn">View More</button>
+      </section>
+
+      <!-- Events Section -->
+      <section id="events" class="category-section" style="display: none;">
+        <h2>Events</h2>
+        <p>Custom designs tailored for any event.</p>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/images/events/event1.jpeg" alt="Event Design 1" class="gallery-image">
+            <p>Event Design 1</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event2.jpeg" alt="Event Design 2" class="gallery-image">
+            <p>Event Design 2</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event3.jpeg" alt="Event Design 3" class="gallery-image">
+            <p>Event Design 3</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event4.jpeg" alt="Event Design 4" class="gallery-image">
+            <p>Event Design 4</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event5.jpeg" alt="Event Design 5" class="gallery-image">
+            <p>Event Design 5</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event6.jpeg" alt="Event Design 6" class="gallery-image">
+            <p>Event Design 6</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event7.jpeg" alt="Event Design 7" class="gallery-image">
+            <p>Event Design 7</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event8.jpeg" alt="Event Design 8" class="gallery-image">
+            <p>Event Design 8</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event9.jpeg" alt="Event Design 9" class="gallery-image">
+            <p>Event Design 9</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event10.jpeg" alt="Event Design 10" class="gallery-image">
+            <p>Event Design 10</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event11.jpeg" alt="Event Design 11" class="gallery-image">
+            <p>Event Design 11</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event12.jpeg" alt="Event Design 12" class="gallery-image">
+            <p>Event Design 12</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event13.jpeg" alt="Event Design 13" class="gallery-image">
+            <p>Event Design 13</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event14.jpeg" alt="Event Design 14" class="gallery-image">
+            <p>Event Design 14</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event15.jpeg" alt="Event Design 15" class="gallery-image">
+            <p>Event Design 15</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event16.jpeg" alt="Event Design 16" class="gallery-image">
+            <p>Event Design 16</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event17.jpeg" alt="Event Design 17" class="gallery-image">
+            <p>Event Design 17</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event18.jpeg" alt="Event Design 18" class="gallery-image">
+            <p>Event Design 18</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event19.jpeg" alt="Event Design 19" class="gallery-image">
+            <p>Event Design 19</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event20.jpeg" alt="Event Design 20" class="gallery-image">
+            <p>Event Design 20</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event21.jpeg" alt="Event Design 21" class="gallery-image">
+            <p>Event Design 21</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event22.jpeg" alt="Event Design 22" class="gallery-image">
+            <p>Event Design 22</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event23.jpeg" alt="Event Design 23" class="gallery-image">
+            <p>Event Design 23</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event24.jpeg" alt="Event Design 24" class="gallery-image">
+            <p>Event Design 24</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event25.jpeg" alt="Event Design 25" class="gallery-image">
+            <p>Event Design 25</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event26.jpeg" alt="Event Design 26" class="gallery-image">
+            <p>Event Design 26</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event27.jpeg" alt="Event Design 27" class="gallery-image">
+            <p>Event Design 27</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event28.jpeg" alt="Event Design 28" class="gallery-image">
+            <p>Event Design 28</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event29.jpeg" alt="Event Design 29" class="gallery-image">
+            <p>Event Design 29</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event30.jpeg" alt="Event Design 30" class="gallery-image">
+            <p>Event Design 30</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event31.jpeg" alt="Event Design 31" class="gallery-image">
+            <p>Event Design 31</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event32.jpeg" alt="Event Design 32" class="gallery-image">
+            <p>Event Design 32</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event33.jpeg" alt="Event Design 33" class="gallery-image">
+            <p>Event Design 33</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event34.jpeg" alt="Event Design 34" class="gallery-image">
+            <p>Event Design 34</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event35.jpeg" alt="Event Design 35" class="gallery-image">
+            <p>Event Design 35</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event36.jpeg" alt="Event Design 36" class="gallery-image">
+            <p>Event Design 36</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event37.jpeg" alt="Event Design 37" class="gallery-image">
+            <p>Event Design 37</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event38.jpeg" alt="Event Design 38" class="gallery-image">
+            <p>Event Design 38</p>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/images/events/event39.jpeg" alt="Event Design 39" class="gallery-image">
+            <p>Event Design 39</p>
+          </div>
+        </div>
+        <button class="view-more-btn">View More</button>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Ready to Bring Your Vision to Life?</h2>
+        <p>Let us craft something truly special for you—book your consultation today.</p>
+        <button class="cta-btn" onclick="showSection('contact')">Book Your Consultation</button>
+      </section>
+    </section>
+
+    <!--New Product Section Added Above-->
 
   <footer>
     <div class="footer-links">

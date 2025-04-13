@@ -53,13 +53,16 @@
   justify-content: center;
 }
 
+/* Ensure gallery cards are displayed by default (will be overridden by JS) */
 .gallery-card {
+  display: block;
   background-color: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
+
 
 /* Hide Images with data-visible="false" */
 .gallery-card[data-visible="false"] {
@@ -96,8 +99,32 @@
   cursor: pointer;
   margin-top: 2rem;
   transition: transform 0.3s ease-in-out;
+  display: none; /* Hidden by default, shown by JS if needed */
 }
+
 
 .view-more-btn:hover {
   transform: scale(1.05);
+}
+
+/* Make category navigation sticky */
+.category-navigation {
+  position: sticky;
+  top: 80px; /* Adjust based on your navbar height */
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 0;
+}
+
+/* Add smooth loading for images */
+.gallery-image {
+  transition: opacity 0.3s ease;
+}
+
+.gallery-image.loading {
+  opacity: 0;
+}
+
+.gallery-image.loaded {
+  opacity: 1;
 }

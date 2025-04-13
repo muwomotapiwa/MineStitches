@@ -1,5 +1,5 @@
 // Scroll-to-Top Button
-document.querySelector('.scroll-top').addEventListener('click', () => {
+document.querySelector('.scroll-top')?.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
@@ -7,63 +7,61 @@ document.querySelector('.scroll-top').addEventListener('click', () => {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-// Add click event listener to toggle the hamburger menu
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
-
-// Close the hamburger menu when a navigation link is clicked
-document.querySelectorAll('.nav-links li a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active'); // Remove the 'active' class
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
-});
+
+  // Close the hamburger menu when a navigation link is clicked
+  document.querySelectorAll('.nav-links li a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+}
 
 // Music Player Logic
 const playButton = document.getElementById('playButton');
-let audioElement;
+if (playButton) {
+  let audioElement;
+  let isPlaying = localStorage.getItem('audioState') === 'playing';
 
-// Check if an audio element already exists in localStorage
-if (localStorage.getItem('audioState') === 'playing') {
+  // Initialize audio
   audioElement = new Audio('assets/audio/Iconic_PianoI_Pieces_in_2024_1_hour_Relaxing_Piano_(by_James_Malikey).mp3');
-  audioElement.play();
-  playButton.textContent = '⏸'; // Pause icon
-} else {
-  audioElement = new Audio('assets/audio/Iconic_PianoI_Pieces_in_2024_1_hour_Relaxing_Piano_(by_James_Malikey).mp3');
-}
-
-// Add click event listener to toggle play/pause
-let isPlaying = localStorage.getItem('audioState') === 'playing';
-
-playButton.addEventListener('click', () => {
-  if (!isPlaying) {
-    audioElement.play();
-    playButton.textContent = '⏸'; // Pause icon
-    isPlaying = true;
-    localStorage.setItem('audioState', 'playing'); // Save state to localStorage
-  } else {
-    audioElement.pause();
-    playButton.textContent = '▶'; // Play icon
-    isPlaying = false;
-    localStorage.setItem('audioState', 'paused'); // Save state to localStorage
+  
+  if (isPlaying) {
+    audioElement.play().catch(e => console.log("Audio play failed:", e));
+    playButton.textContent = '⏸';
   }
-});
 
-// Listen for audio end to reset the play button
-audioElement.addEventListener('ended', () => {
-  playButton.textContent = '▶';
-  isPlaying = false;
-  localStorage.setItem('audioState', 'paused');
-});
+  playButton.addEventListener('click', () => {
+    if (!isPlaying) {
+      audioElement.play().then(() => {
+        playButton.textContent = '⏸';
+        isPlaying = true;
+        localStorage.setItem('audioState', 'playing');
+      }).catch(e => console.log("Audio play failed:", e));
+    } else {
+      audioElement.pause();
+      playButton.textContent = '▶';
+      isPlaying = false;
+      localStorage.setItem('audioState', 'paused');
+    }
+  });
+
+  audioElement.addEventListener('ended', () => {
+    playButton.textContent = '▶';
+    isPlaying = false;
+    localStorage.setItem('audioState', 'paused');
+  });
+}
 
 // Contact Form Submission
 const consultationForm = document.getElementById('consultation-form');
-
 if (consultationForm) {
   consultationForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    // Collect form data
     const formData = {
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
@@ -72,57 +70,135 @@ if (consultationForm) {
       message: document.getElementById('message').value.trim(),
     };
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.phone || !formData.dateTime || !formData.message) {
       alert('Please fill out all fields.');
       return;
     }
 
-    // Simulate form submission (e.g., sending data via an API)
     console.log('Form Data Submitted:', formData);
-
-    // Display a success message
     alert('Thank you! Your consultation request has been submitted.');
-
-    // Reset the form
     consultationForm.reset();
   });
 }
 
-// Function to show a specific section and hide others
+// Section Management
 function showSection(sectionId) {
   const sections = document.querySelectorAll('.page-section');
   sections.forEach((section) => {
     section.style.display = 'none';
   });
-  document.getElementById(sectionId).style.display = 'block';
+
+  const sectionToShow = document.getElementById(sectionId);
+  if (sectionToShow) {
+    sectionToShow.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (sectionId === 'products-gallery') {
+      initProductsGallery();
+    }
+  }
 }
 
-// Show the Home section by default
-window.onload = () => {
-  showSection('home');
-};
+// Products Gallery Functions
+function initProductsGallery() {
+  showCategory('modern-traditional');
+  
+  document.querySelectorAll('.category-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      const categoryId = this.getAttribute('data-section');
+      showCategory(categoryId);
+    });
+  });
+  
+  document.querySelectorAll('.view-more-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const categorySection = this.closest('.category-section');
+      const cards = categorySection.querySelectorAll('.gallery-card');
+      
+      cards.forEach(card => {
+        card.style.display = 'block';
+      });
+      
+      this.style.display = 'none';
+    });
+  });
+}
+
+function showCategory(categoryId) {
+  document.querySelectorAll('.category-section').forEach(section => {
+    section.style.display = 'none';
+  });
+  
+  const categoryToShow = document.getElementById(categoryId);
+  if (categoryToShow) {
+    categoryToShow.style.display = 'block';
+    initViewMore(categoryToShow);
+  }
+}
+
+function initViewMore(categorySection) {
+  const cards = categorySection.querySelectorAll('.gallery-card');
+  const viewMoreBtn = categorySection.querySelector('.view-more-btn');
+  
+  cards.forEach((card, index) => {
+    card.style.display = index < 8 ? 'block' : 'none';
+  });
+  
+  viewMoreBtn.style.display = cards.length > 8 ? 'block' : 'none';
+  
+  // Add lazy loading to images
+  categorySection.querySelectorAll('.gallery-image').forEach(img => {
+    img.loading = 'lazy';
+  });
+}
 
 // About Us Audio Playback
 const aboutUsAudioButton = document.getElementById('aboutUsAudioButton');
-const aboutUsAudio = new Audio('assets/audio/aboutusvoice.mp3');
+if (aboutUsAudioButton) {
+  const aboutUsAudio = new Audio('assets/audio/aboutusvoice.mp3');
+  let isAudioPlaying = false;
 
-let isAudioPlaying = false;
+  aboutUsAudioButton.addEventListener('click', () => {
+    if (!isAudioPlaying) {
+      aboutUsAudio.play().then(() => {
+        aboutUsAudioButton.textContent = '⏸';
+        isAudioPlaying = true;
+      }).catch(e => console.log("Audio play failed:", e));
+    } else {
+      aboutUsAudio.pause();
+      aboutUsAudioButton.textContent = '▶';
+      isAudioPlaying = false;
+    }
+  });
 
-aboutUsAudioButton.addEventListener('click', () => {
-  if (!isAudioPlaying) {
-    aboutUsAudio.play();
-    aboutUsAudioButton.textContent = '⏸'; // Pause icon
-    isAudioPlaying = true;
-  } else {
-    aboutUsAudio.pause();
-    aboutUsAudioButton.textContent = '▶'; // Play icon
+  aboutUsAudio.addEventListener('ended', () => {
+    aboutUsAudioButton.textContent = '▶';
     isAudioPlaying = false;
-  }
-});
+  });
+}
 
-// Listen for audio end to reset the play button
-aboutUsAudio.addEventListener('ended', () => {
-  aboutUsAudioButton.textContent = '▶';
-  isAudioPlaying = false;
+// Initialize the page
+window.addEventListener('DOMContentLoaded', () => {
+  showSection('home');
+  
+  // Activate first category button if on products-gallery page
+  if (window.location.hash === '#products-gallery') {
+    showSection('products-gallery');
+  }
+  
+  // Add active class to first category button
+  document.querySelector('.category-btn')?.classList.add('active');
+  
+  // Set active nav link
+  document.querySelectorAll('.nav-links li a').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('.nav-links li a').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 });
