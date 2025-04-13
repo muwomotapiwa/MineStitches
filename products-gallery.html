@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products & Gallery - MineStitches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" /> <!-- Shared styles -->
+  <link rel="stylesheet" href="css/products-gallery-style.css" /> <!-- Products & Gallery-specific styles -->
+</head>
+<body>
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Stitches</a>
+    </div>
+    <!-- Music Player (Visible only on Desktop/Tablet) -->
+    <div class="music-player" id="musicPlayer">
+      <div class="track-title">Click Play and listen to Iconic Piano Pieces (by James Malikey)</div>
+      <button class="play-button" id="playButton">▶</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="products-gallery.html">Products & Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="assets/videos/MotionBlack.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Explore Our Collections</h1>
+      <p>Discover the art of elegance through our curated designs for every occasion.</p>
+      <button class="cta-btn" onclick="showSection('book-consultation')">Book a Consultation</button>
+    </div>
+  </header>
+
+  <!-- Navigation Buttons -->
+  <section class="category-navigation">
+    <div class="container">
+      <button class="category-btn" onclick="showSection('modern-traditional')">Modern Traditional</button>
+      <button class="category-btn" onclick="showSection('white-weddings')">White Weddings</button>
+      <button class="category-btn" onclick="showSection('matrix-dance')">Matrix Dance</button>
+      <button class="category-btn" onclick="showSection('events')">Events</button>
+    </div>
+  </section>
+
+  <!-- Modern Traditional Section -->
+  <section id="modern-traditional" class="category-section">
+    <h2>Modern Traditional</h2>
+    <p>Blend tradition with modernity in these stunning designs.</p>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="assets/images/modern1.jpeg" alt="Modern Traditional Design 1" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/modern2.jpeg" alt="Modern Traditional Design 2" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/modern3.jpeg" alt="Modern Traditional Design 3" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <!-- Add more images here -->
+    </div>
+    <button class="view-more-btn">View More</button>
+  </section>
+
+  <!-- White Weddings Section -->
+  <section id="white-weddings" class="category-section" style="display: none;">
+    <h2>White Weddings</h2>
+    <p>Elegant gowns and suits for your special day.</p>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="assets/images/wedding1.jpeg" alt="Wedding Dress 1" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/wedding2.jpeg" alt="Wedding Dress 2" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/wedding3.jpeg" alt="Wedding Dress 3" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <!-- Add more images here -->
+    </div>
+    <button class="view-more-btn">View More</button>
+  </section>
+
+  <!-- Matrix Dance Section -->
+  <section id="matrix-dance" class="category-section" style="display: none;">
+    <h2>Matrix Dance</h2>
+    <p>Bold and vibrant designs for your matric dance.</p>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="assets/images/matrix1.jpeg" alt="Matrix Dance Gown 1" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/matrix2.jpeg" alt="Matrix Dance Gown 2" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/matrix3.jpeg" alt="Matrix Dance Gown 3" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <!-- Add more images here -->
+    </div>
+    <button class="view-more-btn">View More</button>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="category-section" style="display: none;">
+    <h2>Events</h2>
+    <p>Custom designs tailored for any event.</p>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="assets/images/event1.jpeg" alt="Event Outfit 1" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/event2.jpeg" alt="Event Outfit 2" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <div class="gallery-card">
+        <img src="assets/images/event3.jpeg" alt="Event Outfit 3" class="gallery-image">
+        <p>Design Name</p>
+      </div>
+      <!-- Add more images here -->
+    </div>
+    <button class="view-more-btn">View More</button>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p>&copy; 2025 MineStitches. All Rights Reserved.</p>
+    <!-- Credit Section -->
+    <p class="credit">
+      Website By 
+      <a href="https://www.KypexTech.co.za" target="_blank" class="credit-link">KypexTech</a>
+    </p>
+  </footer>
+
+  <button class="scroll-top">↑</button>
+  <script src="js/script.js"></script>
+  <script src="js/products-gallery-script.js"></script>
+</body>
+</html>
