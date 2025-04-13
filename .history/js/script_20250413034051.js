@@ -94,27 +94,3 @@ function showSection(sectionId) {
 window.onload = () => {
   showSection('home');
 };
-
-// About Us Audio Playback
-const aboutUsAudioButton = document.getElementById('aboutUsAudioButton');
-const aboutUsAudio = new Audio('assets/audio/aboutusvoice.mp3');
-
-let isAudioPlaying = false;
-
-aboutUsAudioButton.addEventListener('click', () => {
-  if (!isAudioPlaying) {
-    aboutUsAudio.play();
-    aboutUsAudioButton.textContent = '⏸'; // Pause icon
-    isAudioPlaying = true;
-  } else {
-    aboutUsAudio.pause();
-    aboutUsAudioButton.textContent = '▶'; // Play icon
-    isAudioPlaying = false;
-  }
-});
-
-// Listen for audio end to reset the play button
-aboutUsAudio.addEventListener('ended', () => {
-  aboutUsAudioButton.textContent = '▶';
-  isAudioPlaying = false;
-});
