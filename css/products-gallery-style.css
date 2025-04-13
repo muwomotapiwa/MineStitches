@@ -61,6 +61,11 @@
   transition: transform 0.3s ease-in-out;
 }
 
+/* Hide Images with data-visible="false" */
+.gallery-card[data-visible="false"] {
+  display: none;
+}
+
 .gallery-card:hover {
   transform: scale(1.05);
 }
